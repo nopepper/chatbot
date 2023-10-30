@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "chatbot"
+version = "0.1.0"
+description = ""
+authors = ["Robert Veres <robert.veres00@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+farm-haystack = {extras = ["faiss", "inference"], version = "^1.21.2"}
+ipykernel = "^6.26.0"
+ipywidgets = "^8.1.1"
+torch = {version = "^2.1.0+cu121", source = "pytorch"}
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
